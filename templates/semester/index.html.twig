@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container-md col-md-8">
+<a class="btn btn-warning" href="{{path('semester_add')}}">
+    Add new semester
+</a>
+<table class="table table-striped|sm|bordered|hover|inverse table-inverse table-responsive">
+    <thead >
+        <tr>
+            <th>Semester ID</th>
+            <th>Semester name</th>
+			<th>Time Start</th>
+            <th>Time End</th>
+            <th>Tuition</th>
+            <th>Subject</th>
+			<th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for semester in semesters  %}
+        <tr>
+            <td>{{ semester.id }}</td>
+                <td>{{ semester.name }}</td>
+                <td>{{semester.TimeStart | date('d/m/Y')}}</td>
+                <td>{{semester.TimeEnd | date('d/m/Y')}}</td>
+                <td>{{semester.tuition}} $</td>
+                  <td>
+                    {% if semester.subjects != null %}
+                        {% for subject in semester.subjects %}
+                            <a class="text-decoration-none" href="{{ path('subject_index', {'id' : subject.id }) }}">
+                                {{ subject.name }}
+                            </a>
+                            <br>
+                        {% endfor %}
+                    {% endif %}
+                </td>
+            <td>
+            <a class="btn btn-warning" href="{{path('semester_edit',{'id':semester.id})}}">
+            Edit
+            </a>
+            <a class="btn btn-warning" href="{{path('semester_delete',{'id':semester.id})}}"
+            onclick = "return confirm('Are You relly wanna delete this semester?');">
+            Delete
+            </a>
+            </td>
+        </tr> 
+{% endfor %}
+    </tbody>
+</table>
+</div>
+
+{% endblock %} 
+{% block copyright %}
+		<div class="container col-md-8 text-center text-bold mt-lg-5">
+			<h4>
+				<i class="fa fa-copyright" aria-hidden="true">
+					Copyright by Greenwich University - 2021
+				</i>
+			</h4>
+		{% endblock %}

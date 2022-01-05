@@ -1,0 +1,47 @@
+{% extends "base.html.twig" %}
+{% block body %}
+
+<div class="container col-md-6 mt-3 mb-3">
+<h2 class="text-center"> Edit Subject</h2>
+<div class="col md-6"></div>
+
+{{ form_start(form) }}
+
+<div class="form-group">
+    {{ form_label(form.subjectID)}}
+    {{form_widget(form.subjectID,{
+        'attr' : {'class' : "form-control"}
+    })
+    }}
+</div>
+
+<div class="form-group">
+    {{ form_label(form.name)}}
+    {{form_widget(form.name,{
+        'attr' : {'class' : "form-control"}
+    })}}
+</div>
+
+<div class="form-group">
+    {{ form_label(form.schedule)}}
+    {{form_widget(form.schedule,{
+        'attr' : {'class' : "form-control"}
+    })}}
+</div>
+
+<div class="form-group">
+    {{ form_label(form.material)}}
+    {{form_widget(form.material,{
+        'attr' : {'class' : 'form-control'}
+    })
+    }}
+
+<div class="form_group text-center mt-3">
+<input type="submit" value="EDIT" class="btn btn-primary">
+</div>
+
+{{ form_end(form) }}
+
+</div>
+
+{% endblock %}
