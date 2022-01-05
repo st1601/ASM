@@ -43,15 +43,15 @@ class SemesterType extends AbstractType
             'currency' => 'USD'
 
         ])
-    // ->add('sub', EntityType::class,
-    //         [
-    //             'label' => 'sub(s)',
-    //             'required' => true,
-    //             'class' => Subject::class,
-    //             'choice_label' => 'name',
-    //             'multiple' => true,
-    //             'expanded' => true
-    //         ])
+    ->add('subjects', EntityType::class,
+            [
+                'label' => 'subject',
+                'required' => true,
+                'class' => Subject::class,
+                'choice_label' => 'name',
+                'multiple' => true,
+                'expanded' => true
+            ])
         ;
     }
 

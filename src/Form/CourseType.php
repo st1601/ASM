@@ -33,15 +33,15 @@ class CourseType extends AbstractType
                 'required' => true,
             ]
         )
-        // ->add('teacher', EntityType::class,
-        //     [
-        //         'label' => 'Teacher(s)',
-        //         'required' => true,
-        //         'class' => Teacher::class,
-        //         'choice_label' => 'name',
-        //         'multiple' => true,
-        //         'expanded' => true
-        //     ])
+        ->add('teachers', EntityType::class,
+            [
+                'label' => 'teacher(s)',
+                'required' => true,
+                'class' => Teacher::class,
+                'choice_label' => 'name',
+                'multiple' => true,
+                'expanded' => true
+            ])
         ;
     }
 

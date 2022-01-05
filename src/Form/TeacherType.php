@@ -47,15 +47,15 @@ class TeacherType extends AbstractType
             'data_class' => null,
             'required' => is_null($builder->getData()->getAvatar())
         ])
-        // ->add('course', EntityType::class,
-        //     [
-        //         'label' => 'Course(s)',
-        //         'required' => true,
-        //         'class' => Course::class,
-        //         'choice_label' => 'name',
-        //         'multiple' => true,
-        //         'expanded' => true
-        //     ])
+        ->add('courses', EntityType::class,
+            [
+                'label' => 'course(s)',
+                'required' => true,
+                'class' => Course::class,
+                'choice_label' => 'name',
+                'multiple' => true,
+                'expanded' => true
+            ])
         ;
     }
 
