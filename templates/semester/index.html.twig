@@ -1,11 +1,11 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<div class="container-md col-md-8">
+<div class="container-md col-md-8 text-center mt-4">
 <a class="btn btn-warning" href="{{path('semester_add')}}">
     Add new semester
 </a>
-<table class="table table-striped|sm|bordered|hover|inverse table-inverse table-responsive">
+<table class="table table-success table-striped">
     <thead >
         <tr>
             <th>Semester ID</th>
@@ -52,10 +52,10 @@
 
 {% endblock %} 
 {% block copyright %}
-		<div class="container col-md-8 text-center text-bold mt-lg-5">
+		<div class="text-primary">
 			<h4>
 				<i class="fa fa-copyright" aria-hidden="true">
-					Copyright by Greenwich University - 2021
+					Copyright by Group 4
 				</i>
 			</h4>
 		{% endblock %}

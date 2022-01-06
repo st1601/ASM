@@ -1,10 +1,10 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-	<div class="container col-md-6 mt-3">
+	<div class="container-md col-md-8 text-center mt-4">
 		<h3 class="text-success text-center">Course LIST</h3>
 		<a class="btn btn-outline-success mt-2" href="{{ path('course_add') }}">ADD Course</a>
-		<table class="table table-striped text-center mt-2">
+		<table class="table table-success table-striped">
 			<thead>
 				<tr>
 					<th>ID</th>
@@ -34,10 +34,10 @@
 	</div>
 {% endblock %}
 {% block copyright %}
-		<div class="container col-md-8 text-center text-bold mt-lg-5"class="center">
+		<div class="text-primary"class="center">
 			<h4>
 				<i class="fa fa-copyright" aria-hidden="true">
-					Copyright by Greenwich University - 2021
+					Copyright by Group 4
 				</i>
 			</h4>
 		{% endblock %}

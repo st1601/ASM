@@ -5,14 +5,14 @@
 {% endblock %}
 
 {% block body %}
-	<div class="container-fluid col-8 mt-3">
+	<div class="p-3 mb-2 bg-success text-white">
 		<h3 class="text-center mt-5">UPDATE Course</h3>
 		{{ form_start(form) }}
 		<div class="form-group">
 			{{ form_label(form.name) }}
 			{{ form_widget(form.name,
                {
-                  'attr': { 'class' : 'form-control'}
+                  'attr': { 'class' : 'col-form-label'}
                })
             }}
 		</div>
@@ -21,7 +21,7 @@
 					{{ form_label(form.grade) }}
 					{{ form_widget(form.grade,
                {
-                  'attr': { 'class' : 'form-control'}
+                  'attr': { 'class' : 'col-form-label'}
                })
             }}
 				</div>

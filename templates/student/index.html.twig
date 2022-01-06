@@ -5,15 +5,11 @@
    <a href="{{ path('student_add')}}">
       <img src="{{ asset('img/add.png') }}" width="80" height="50">
    </a>
-   <div class="form-group col-md-4 mb-3">
-      <form action="{{path('search_student_title')}}" method="POST">
-         <input class="form-control" type="search" name="title" required placeholder="Search by student title">
-      </form>
-   </div>
+   
   {% if students == null %}
     <h4 class="text text-danger">No student found</h4>
   {% else %}
-  <table class="table table-striped|sm|bordered|hover|inverse table-inverse table-responsive mt-4">
+  <table class="table table-success table-striped">
        <thead>
             <tr>
                 <th>Student ID</th>
@@ -67,10 +63,10 @@
 </div>
 {% endblock %}
 {% block copyright %}
-		<div class="container col-md-8 text-center text-bold mt-lg-5"class="center">
+		<div class="text-primary"class="center">
 			<h4>
 				<i class="fa fa-copyright" aria-hidden="true">
-					Copyright by Greenwich University - 2021
+					Copyright by Group 4
 				</i>
 			</h4>
 		{% endblock %}

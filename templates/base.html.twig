@@ -21,8 +21,9 @@
 	</head>
 	<body>
 		{% block nav %}
-		<nav class="navbar navbar-expand navbar-light bg-light">
-			 <ul class="nav navbar-nav">
+		<div class="p-3 mb-2 bg-info text-white">
+		<nav class="navbar navbar-dark bg-dark">
+			 <ul class="nav nav-pills nav-fill">
 				  <li class="nav-item active">
 						<h3><a class="nav-link" href="{{ path('home') }}">Home</a></h3>
 				  </li>
@@ -62,10 +63,10 @@
 		{% endblock %}
 		{% block body %} {% endblock %}
 		{% block copyright %}
-		<div class="container col-md-8 text-center text-bold mt-lg-5">
+		<div class="text-primary">
 			<h4>
 				<i class="fa fa-copyright" aria-hidden="true">
-					Copyright by Greenwich University - 2021
+					Copyright by Group 4
 				</i>
 			</h4>
 		{% endblock %}

@@ -1,7 +1,7 @@
 {% extends "base.html.twig" %}
 {% block body %}
 
-<div class="container col-md-6 mt-3 mb-3">
+<div class="p-3 mb-2 bg-success text-white">
 <h2 class="text-center"> Edit Subject</h2>
 <div class="col md-6"></div>
 
@@ -25,14 +25,14 @@
 <div class="form-group">
     {{ form_label(form.schedule)}}
     {{form_widget(form.schedule,{
-        'attr' : {'class' : "form-control"}
+        'attr' : {'class' : "col-form-label"}
     })}}
 </div>
 
 <div class="form-group">
     {{ form_label(form.material)}}
     {{form_widget(form.material,{
-        'attr' : {'class' : 'form-control'}
+        'attr' : {'class' : 'col-form-label'}
     })
     }}
 

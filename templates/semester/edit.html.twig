@@ -1,7 +1,7 @@
 {% extends "base.html.twig" %}
 {% block body %}
 
-<div class="container col-md-6 mt-3 mb-3">
+<div class="p-3 mb-2 bg-success text-white">
 <h2 class="text-center"> ADD New SEMESTER</h2>
 <div class="col md-6"></div>
 
@@ -10,28 +10,28 @@
 <div class="form-group">
     {{ form_label(form.name)}}
     {{form_widget(form.name,{
-        'attr' : {'class' : "form-control"}
+        'attr' : {'class' : "col-form-label"}
     })}}
 </div>
 
 <div class="form-group">
     {{ form_label(form.timeStart)}}
     {{form_widget(form.timeStart,{
-        'attr' : {'class' : "form-control"}
+        'attr' : {'class' : "col-form-label"}
     })}}
 </div>
 
 <div class="form-group">
     {{ form_label(form.timeEnd)}}
     {{form_widget(form.timeEnd,{
-        'attr' : {'class' : "form-control"}
+        'attr' : {'class' : "col-form-label"}
     })}}
 </div>
 
 <div class="form-group">
     {{ form_label(form.tuition)}}
     {{form_widget(form.tuition,{
-        'attr' : {'class' : "form-control"}
+        'attr' : {'class' : "col-form-label"}
     })
     }}
 </div>

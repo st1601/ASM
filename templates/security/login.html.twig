@@ -6,15 +6,16 @@
 {% block nav %}{% endblock %} 
 
 {% block body %}
-<div class="container col-md-6 text-center">
-<div class="container-fluid">
+<div class="p-3 mb-2 bg-dark text-white">
+<div class="mb-3">
+<div class="container">
     {% for message in app.session.flashbag.get('Warning') %}
-        <p class="alert alert-danger"> {{message}} </p>
+        <p class="form-label"> {{message}} </p>
     {% endfor %}
 </div>
 <form method="post">
     {% if error %}
-        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        <div class="form-label">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
 
     {% if app.user %}
@@ -39,7 +40,7 @@
             <input type="checkbox" name="_remember_me"> Remember me
         </label>
     </div>
-    <button class="btn btn-lg btn-primary" type="submit">
+    <button class="btn btn-outline-primary" type="submit">
         Login
     </button>
 </form>

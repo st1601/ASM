@@ -1,7 +1,8 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-<div class="container col-md-6 mt-3 mb-3">
+
+<div class="p-3 mb-2 bg-info text-white">
    <h2 class="text-center">ADD NEW STUDENT</h2>
    <div class="col md-6"></div>
    {{ form_start (form) }}
@@ -17,7 +18,7 @@
          {{ form_label (form.birthday) }}
          {{ form_widget (form.birthday,
             {
-               'attr' : {'class' : 'form-control'}
+               'attr' : {'class' : 'form-label'}
             })
          }}
       </div>
@@ -25,7 +26,7 @@
          {{ form_label (form.address) }}
          {{ form_widget (form.address,
             {
-               'attr' : {'class' : 'form-control'}
+               'attr' : {'class' : 'form-label'}
             })
          }}
       </div>
@@ -33,7 +34,7 @@
          {{ form_label (form.mobile) }}
          {{ form_widget (form.mobile,
             {
-               'attr' : {'class' : 'form-control'}
+               'attr' : {'class' : 'form-label'}
             })
          }}
       </div> 
@@ -41,7 +42,7 @@
       {{ form_label (form.cover) }}
       {{ form_widget (form.cover,
          {
-            'attr' : {'class' : 'form-control'}
+            'attr' : {'class' : 'form-label'}
          })
       }}
       </div>
@@ -49,13 +50,13 @@
          {{ form_label (form.room) }}
          {{ form_widget (form.room,
             {
-               'attr' : {'class' : 'form-control'}
+               'attr' : {'class' : 'form-label'}
             })
          }}
       </div>
       
       <div class="form-group text-center mt-3">
-         <input class="btn btn-primary" type="submit" value="Add">
+         <input class="btn btn-secondary" type="submit" value="Add">
       </div>
    {{ form_end (form) }}
 </div>
