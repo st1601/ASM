@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use App\Entity\Room;
+use DateTimeInterface;
 use App\Entity\Student;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -33,6 +34,12 @@ class StudentType extends AbstractType
             'required' => true,
             'widget' => 'single_text'
         ])
+        // ->add('present', DateType::class,
+        // [
+        //     'label' => 'Student present',
+        //     'required' => true,
+        //     'widget' => 'single_text'
+        // ])
         ->add('address', TextType::class,
         [
             'label' => 'Student address',

@@ -14,6 +14,7 @@ class StudentFixtures extends Fixture
             $student = new Student; 
             $student->setName("Student $i");
             $student->setBirthday(\DateTime::createFromFormat('Y-m-d','2000-04-18'));
+            // $student->setPresent(\DateTime::createFromFormat('Y-m-d','2021-01-06'));
             $student->setAddress("Ha Noi");
             $student->setMobile("0912345678");
             $student->setCover("student1.jpg");

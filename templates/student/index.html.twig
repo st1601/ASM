@@ -5,7 +5,11 @@
    <a href="{{ path('student_add')}}">
       <img src="{{ asset('img/add.png') }}" width="80" height="50">
    </a>
-   
+   <div class="form-group col-md-2">
+   <form action="{{ path('search_student_name')}}" method="get">
+   <input class="text" type="name" name="name" required placeholder="Search by Student">
+   <input type="submit" value="Search">
+   </form></div>
   {% if students == null %}
     <h4 class="text text-danger">No student found</h4>
   {% else %}
@@ -15,6 +19,8 @@
                 <th>Student ID</th>
                 <th>Student Name</th>
                 <th>Student Birthday</th>
+                {# <th>Student Present</th>
+                <th>Student Age</th> #}
                 <th>Student Address</th>
                 <th>Student Mobile</th>
                 <th>Student Cover</th>
@@ -29,6 +35,8 @@
                 <td>{{ student.id }}</td>
                 <td>{{ student.name }}</td>
                 <td> {{student.birthday | date('d/m/Y')}} </td>
+                {# <td>{{ student.present | date('d/m/Y')}}</td>
+                <td>{{student.present - student.birthday | date('d/m/Y')}}</td> #}
                  <td> {{ student.address}} </td>
                   <td> {{ student.mobile}} </td>
                   <td>

@@ -33,6 +33,9 @@ class Student
     #[ORM\ManyToMany(targetEntity: Room::class, inversedBy: 'students')]
     private $Room;
 
+    // #[ORM\Column(type: 'date')]
+    // private $present;
+
     public function __construct()
     {
         $this->Room = new ArrayCollection();
@@ -127,4 +130,16 @@ class Student
 
         return $this;
     }
+
+    // public function getPresent(): ?\DateTimeInterface
+    // {
+    //     return $this->present;
+    // }
+
+    // public function setPresent(\DateTimeInterface $present): self
+    // {
+    //     $this->present = $present;
+
+    //     return $this;
+    // }
 }

@@ -147,11 +147,11 @@ class StudentController extends AbstractController
     }
 
     /**
-     * @Route("/student/search", name="search_student_title")
+     * @Route("/student/search", name="search_student_name")
      */
     public function searchStudentByTitle (StudentRepository $repository, Request $request) {
-        $title = $request->get("title");
-        $students = $repository->searchStudent($title);
+        $name = $request->get("name");
+        $students = $repository->searchStudent($name);
         return $this->render("student/index.html.twig",
         [
             'students' => $students
