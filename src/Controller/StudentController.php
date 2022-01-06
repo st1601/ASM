@@ -125,21 +125,21 @@ class StudentController extends AbstractController
     }
 
     /**
-     * @Route("/student/sort/asc", name="sort_student_id_asc")
+     * @Route("/student/sort/asc", name="sort_student_birthday_asc")
      */
-    public function sortStudentByIdAsc (StudentRepository $repository) {
-        $students = $repository->sortIdAsc();
+    public function sortStudentByBirthdayAsc (StudentRepository $repository) {
+        $students = $repository->sortBirthdayAsc();
         return $this->render("student/index.html.twig",
         [
-            'student' => $students
+            'students' => $students
         ]);
     }
 
      /**
-     * @Route("/student/sort/desc", name="sort_student_id_desc")
+     * @Route("/student/sort/desc", name="sort_student_birthday_desc")
      */
-    public function sortStudentByIdDesc (StudentRepository $repository) {
-        $students = $repository->sortIdDesc();
+    public function sortStudentByBirthdayDesc (StudentRepository $repository) {
+        $students = $repository->sortBirthdayDesc();
         return $this->render("student/index.html.twig",
         [
             'students' => $students
@@ -149,7 +149,7 @@ class StudentController extends AbstractController
     /**
      * @Route("/student/search", name="search_student_name")
      */
-    public function searchStudentByTitle (StudentRepository $repository, Request $request) {
+    public function searchStudentByName (StudentRepository $repository, Request $request) {
         $name = $request->get("name");
         $students = $repository->searchStudent($name);
         return $this->render("student/index.html.twig",

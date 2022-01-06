@@ -47,4 +47,34 @@ class StudentRepository extends ServiceEntityRepository
         ;
     }
     */
+    /**
+     * @return Student[]
+     */
+    public function SortBirthdayAsc(){
+        return $this->createQueryBuilder('student')
+        ->orderBy('student.birthday','ASC')
+        ->getQuery()
+        ->getResult();
+    }
+    /**
+     * @return Student[]
+     */
+    public function SortBirthdayDesc(){
+        return $this->createQueryBuilder('student')
+        ->orderBy('student.birthday','DESC')
+        ->getQuery()
+        ->getResult();
+    }
+    /**
+     * @return Student[]
+     */
+    public function searchStudent($name) {
+        return $this->createQueryBuilder('student')
+        ->andWhere('student.name LIKE :name')
+        ->setParameter('name', '%' . $name . '%')
+        ->orderBy('student.name','asc')
+        ->setMaxResults(5)
+        ->getQuery()
+        ->getResult();
+    }
 }

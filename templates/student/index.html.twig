@@ -6,19 +6,21 @@
       <img src="{{ asset('img/add.png') }}" width="80" height="50">
    </a>
    <div class="form-group col-md-2">
-   <form action="{{ path('search_student_name')}}" method="get">
-   <input class="text" type="name" name="name" required placeholder="Search by Student">
+   <form action="{{ path('search_student_name')}}" method="POST">
+   <input class="form-label" type="search" name="name" required placeholder="Search by Student"  >
    <input type="submit" value="Search">
    </form></div>
-  {% if students == null %}
+  {# {% if students == null %}
     <h4 class="text text-danger">No student found</h4>
-  {% else %}
+  {% else %} #}
   <table class="table table-success table-striped">
        <thead>
             <tr>
                 <th>Student ID</th>
                 <th>Student Name</th>
-                <th>Student Birthday</th>
+                <th>Student Birthday
+                <a class="text" href="{{path('sort_student_birthday_asc') }}">Up</a>
+                <a class="text" href="{{path('sort_student_birthday_desc') }}">Down</a></th>
                 {# <th>Student Present</th>
                 <th>Student Age</th> #}
                 <th>Student Address</th>
@@ -67,7 +69,7 @@
        {% endfor %}
        </tbody>
   </table>
-  {% endif %}
+  {# {% endif %} #}
 </div>
 {% endblock %}
 {% block copyright %}
